@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+
+<%= link_to "New restaurant +", new_restaurant_path %>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <div class="d-flex my-2 align-items-center">
+      <li><%= restaurant.name %></li>
+      <%= link_to "Details", restaurant_path(restaurant.id), class: "btn btn-primary ms-3 py-1" %>
+    </div>
+  <% end %>
+</ul>

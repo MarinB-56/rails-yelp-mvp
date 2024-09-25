@@ -9,7 +9,7 @@
 #   end
 require 'faker'
 
-CATEGORIES = %w[chinese italian japanese french belgian]
+CATEGORIES = %w[chinese italian japanese french belgian].freeze
 
 puts 'Cleaning database...'
 Restaurant.destroy_all
