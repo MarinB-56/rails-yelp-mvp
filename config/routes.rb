@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   # # # A visitor can see the details of a restaurant, with all the reviews related to the restaurant.
   # get 'restaurants/:id', to: 'restaurants#show', as: 'restaurant'
   # A visitor can add a new review to a restaurant
-  resources :restaurants
+  resources :restaurants, only: [:index, :show, :new, :create]
 end
