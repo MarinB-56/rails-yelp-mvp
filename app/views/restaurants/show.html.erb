@@ -2,10 +2,19 @@
 
 <%= @restaurant.category + " | " + @restaurant.address%>
 
-<h4>Reviews</h4>
+<h4 class="my-3">Reviews</h4>
 
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
     <li class="list-group-item"><%= review.content %></li>
   <% end %>
 </ul>
+
+<%= link_to "Back to restaurants", restaurants_path, class: 'btn btn-primary my-3' %>
+
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :content %>
+  <%= f.submit %>
+<% end %>

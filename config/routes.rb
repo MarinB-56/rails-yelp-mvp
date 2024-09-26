@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   # get 'restaurants/:id', to: 'restaurants#show', as: 'restaurant'
   # A visitor can add a new review to a restaurant
   resources :restaurants, only: [:index, :show, :new, :create] do
-    resources :reviews, only: [:new, :create, :index]
+    resources :reviews, only: [:create, :index]
   end
 end
